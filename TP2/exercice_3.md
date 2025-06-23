@@ -102,4 +102,4 @@ Différences notables entre les deux exécutions :
 > L’accès à title_ratings est plus rapide car l’évaluation de average_rating est plus performante grace à l'index.
 
 4. Pourquoi PostgreSQL abandonne-t-il le parallélisme?
-> PostgreSQL n’utilise pas le parallélisme quand il fait un Index Scan basé sur une jointure car le coup du parralelisme serait plus élever.
+> PostgreSQL n’utilise pas le parallélisme si il fait un Index Scan basé sur une jointure car le coût du parralelisme serait plus élever.
