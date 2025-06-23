@@ -57,7 +57,7 @@ WITH (FORMAT csv,DELIMITER E'\t',HEADER,NULL '\N',QUOTE E'\001');
 
 CREATE TABLE title_ratings (
 tconst VARCHAR(12) PRIMARY KEY,
-average_rating NUMERIC(3,1),  -- exemple : 7.5
+average_rating NUMERIC(3,1),
 num_votes INTEGER
 );
 
@@ -71,8 +71,8 @@ nconst VARCHAR(12) PRIMARY KEY,
 primary_name VARCHAR(200),
 birth_year INTEGER,
 death_year INTEGER,
-primary_profession TEXT,    -- liste séparée par virgules
-known_for_titles TEXT       -- liste de tconst séparés par virgules
+primary_profession TEXT,
+known_for_titles TEXT
 );
 
 COPY name_basics FROM PROGRAM 'zcat /import/name.basics.tsv.gz'
